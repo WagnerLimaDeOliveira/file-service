@@ -1,12 +1,9 @@
 package com.insurance.fileservice.service;
 
 import com.insurance.fileservice.entity.ClaimFile;
-import com.insurance.fileservice.repository.FileRepository;
 import com.insurance.fileservice.testhelper.TestContainerSetupHelper;
-
 import jakarta.inject.Inject;
 import org.jboss.arquillian.container.test.api.Deployment;
-
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
@@ -19,9 +16,7 @@ import org.junit.runner.RunWith;
 
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
-
 
 @RunWith(Arquillian.class)
 public class FileServiceTest {

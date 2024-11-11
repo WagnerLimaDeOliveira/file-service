@@ -4,7 +4,6 @@ import com.insurance.fileservice.entity.ClaimFile;
 import com.insurance.fileservice.repository.FileRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
 
 import java.util.List;
 

@@ -17,7 +17,6 @@ public class ClaimFileController {
 
     private static final Logger LOGGER = Logger.getLogger(ClaimFileController.class.getName());
 
-
     @GET
     @Path("{claimId}")
     @Produces(MediaType.APPLICATION_JSON)

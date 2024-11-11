@@ -1,0 +1,9 @@
+
+4
+mvnw,5\d\5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
+8
+mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
+=
+src/test.http,5\a\5ae2787e415f83c3d6f1ac842f8b62702c3120d0
+]
+-.idea/httpRequests/2024-11-11T120130.500.html,d\c\dcafdd7d4850e432f6ffbf32b782ebda55c9b435

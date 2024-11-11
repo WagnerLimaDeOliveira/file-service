@@ -7,13 +7,14 @@ public class ClaimFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name="file_name", nullable = false)
+    @Column(name = "file_name", nullable = false)
     private String filename;
     private long size;
     private String type;
     private long claimId;
 
-    public ClaimFile() {}
+    public ClaimFile() {
+    }
 
     public ClaimFile(String filename, long size, String type, long claimId) {
         this.filename = filename;

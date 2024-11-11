@@ -3,16 +3,15 @@ package com.insurance.fileservice.repository;
 import com.insurance.fileservice.entity.ClaimFile;
 import jakarta.annotation.PreDestroy;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
 import jakarta.persistence.*;
 
 import java.util.List;
 
 @ApplicationScoped
 public class FileRepository {
-   EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
-   EntityManager entityManager = entityManagerFactory.createEntityManager();
-   EntityTransaction transaction = entityManager.getTransaction();
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    EntityTransaction transaction = entityManager.getTransaction();
 
     public ClaimFile save(ClaimFile claimFile) {
         try {
@@ -20,7 +19,7 @@ public class FileRepository {
             entityManager.persist(claimFile);
             transaction.commit();
         } finally {
-            if(transaction.isActive()) {
+            if (transaction.isActive()) {
                 transaction.rollback();
             }
         }
