@@ -1,5 +1,6 @@
 package com.insurance.fileservice.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.insurance.fileservice.entity.ClaimFile;
 import com.insurance.fileservice.testhelper.TestContainerSetupHelper;
 import jakarta.inject.Inject;
@@ -9,7 +10,6 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -19,16 +19,16 @@ import java.util.List;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
-public class FileServiceTest {
+public class ClaimFileServiceTest {
 
     @Inject
-    private FileService fileService;
+    private ClaimFileService claimFileService;
 
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
                 .addPackages(true, "com.insurance.fileservice")
-                .addClasses(FileService.class)// Include service, repository, and entity packages
+                .addClasses(ClaimFileService.class)// Include service, repository, and entity packages
                 .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"); // Enable CDI
     }
@@ -51,18 +51,13 @@ public class FileServiceTest {
     }
 
     @Test
-    public void should_create_greeting() {
-        Assert.fail("Not yet implemented");
-    }
-
-    @Test
-    public void addClaimFile_shouldAddFileAndReturnAddedFile() {
+    public void addClaimFile_shouldAddFileAndReturnAddedFile() throws JsonProcessingException {
         // Ensure fileService is injected
-        assertNotNull("fileService should have been injected by CDI", fileService);
+        assertNotNull("fileService should have been injected by CDI", claimFileService);
 
         ClaimFile claimFile = new ClaimFile("test-file.jpeg", 2028, "jpeg", 1);
-        fileService.addClaimFile(claimFile);
+        claimFileService.addClaimFile(claimFile);
 
-        List<ClaimFile> claimFiles = fileService.getClaimFilesByClaimId(1);
+        List<ClaimFile> claimFiles = claimFileService.getClaimFilesByClaimId(1);
     }
 }

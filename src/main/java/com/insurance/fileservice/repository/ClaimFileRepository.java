@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @ApplicationScoped
-public class FileRepository {
+public class ClaimFileRepository {
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     EntityTransaction transaction = entityManager.getTransaction();
