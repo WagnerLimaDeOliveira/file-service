@@ -7,3 +7,9 @@
 src/test.http,5\a\5ae2787e415f83c3d6f1ac842f8b62702c3120d0
 ]
 -.idea/httpRequests/2024-11-11T120130.500.html,d\c\dcafdd7d4850e432f6ffbf32b782ebda55c9b435
+€
+Psrc/test/java/com/insurance/fileservice/testhelper/TestContainerSetupHelper.java,c\2\c2dccb163eaa49cf274fef56178d8a922c1b4363
+y
+Isrc/test/java/com/insurance/fileservice/service/ClaimFileServiceTest.java,9\4\94d5c21b4bede92d6d18a47951c88283254f58e1
+o
+?src/main/java/com/insurance/fileservice/config/KafkaConfig.java,5\5\55a5f18d1445111dc582f891b254d15401e933cb

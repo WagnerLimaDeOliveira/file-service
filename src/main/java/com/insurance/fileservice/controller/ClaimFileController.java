@@ -10,7 +10,7 @@ import jakarta.ws.rs.core.Response;
 import java.util.List;
 import java.util.logging.Logger;
 
-@Path("claim")
+@Path("/claim")
 public class ClaimFileController {
     @Inject
     ClaimFileService claimFileService;

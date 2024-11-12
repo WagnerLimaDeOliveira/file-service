@@ -1,0 +1,7 @@
+
+{
+java:S5826%"eAnnotate this method with JUnit5 '@org.junit.jupiter.api.BeforeAll' instead of JUnit4 '@BeforeClass'.(ƒÿ¼È
+~
+java:S58260"cAnnotate this method with JUnit5 '@org.junit.jupiter.api.AfterAll' instead of JUnit4 '@AfterClass'.(œþž™ûÿÿÿÿ
+9
+java:S57866"Remove this 'public' modifier.(ÁƒÂžùÿÿÿÿ
